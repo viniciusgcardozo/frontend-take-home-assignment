@@ -8,3 +8,13 @@ export const Container = styled.div`
   width: 100vw;
   height: calc(100vh - 80px);
 `;
+
+export const SavingHeader = styled.p`
+  color: ${({ theme }) => theme.color.primary};
+  margin-bottom: 24px;
+  font-family: Work Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 120%;
+`;

@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import logo from '../../icons/logo.svg';
+import logo from '../../assets/icons/logo.svg';
 import { Container, Logo } from './styles';
 
 const Header = () => {

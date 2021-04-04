@@ -14,5 +14,5 @@ export const Logo = styled.div`
   display: flex;
   width: 100px;
   height: 100%;
-  padding-left: 56px;
+  margin-left: 56px;
 `;
