@@ -9,7 +9,9 @@ const ArrowNavigation = () => {
   const { date, setDate } = React.useContext(SavingContext);
 
   const decreaseMonth = () => {
-    const newDate = new Date(date.setMonth(date.getMonth() - 1));
+    const newDate = new Date(date);
+    newDate.setMonth(date.getMonth() - 1);
+
     if (newDate < new Date()) return;
     setDate(newDate);
   };
