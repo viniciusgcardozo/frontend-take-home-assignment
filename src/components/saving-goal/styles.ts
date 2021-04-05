@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { MediaSM } from '../../shared/media-query';
 
 export const Container = styled.div`
   display: flex;
@@ -7,6 +8,11 @@ export const Container = styled.div`
   justify-content: center;
   width: 100vw;
   height: calc(100vh - 80px);
+
+  ${MediaSM`
+    display: block;
+    margin-top: 32px;
+  `}
 `;
 
 export const SavingHeader = styled.p`

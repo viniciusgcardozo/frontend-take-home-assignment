@@ -19,5 +19,8 @@ export const Logo = styled.div`
   height: 100%;
   margin-left: 56px;
 
-  ${MediaSM` height: 24px; `}
+  ${MediaSM`
+    height: 24px;
+    margin-left: 16px;
+  `}
 `;
