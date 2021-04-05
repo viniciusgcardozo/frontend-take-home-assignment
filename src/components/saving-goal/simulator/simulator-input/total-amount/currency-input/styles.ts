@@ -1,9 +1,13 @@
 import styled from 'styled-components';
 
+import currency from '../../../../../../assets/icons/currency.svg';
 import { StyledInput } from '../../../../../../shared/input/styles';
 import { MediaSM } from '../../../../../../shared/media-query';
 
 export const Input = styled(StyledInput)`
+  background: #ffffff url(${currency}) no-repeat left;
+  background-position: 7px 15px;
+  margin-top: 7px;
   padding-left: 35px;
   width: 272px;
 
@@ -11,12 +15,4 @@ export const Input = styled(StyledInput)`
     width: calc(100vw - 40px);
     max-width: 480px;
   `}
-`;
-
-export const Icon = styled.img`
-  position: relative;
-  top: 40px;
-  left: 5px;
-  width: 24px;
-  margin-top: -17px;
 `;

@@ -1,40 +1,29 @@
 import * as React from 'react';
 
-import { Input, Icon } from './styles';
-import currency from '../../../../../../assets/icons/currency.svg';
+import { Input } from './styles';
 import { SavingContext } from '../../../../saving-state';
 
 const CurrencyInput = () => {
   const { amount, setAmount } = React.useContext(SavingContext);
-  const [value, setValue] = React.useState(amount);
-
-  React.useEffect(() => {
-    if (value !== amount) setAmount(value);
-  }, [amount, setAmount, value]);
 
   const amountChanged = (event: React.ChangeEvent<HTMLInputElement>) => {
     const { value } = event.target;
-    const newValue = Number(value.replace(/,/g, '').replace(/\./g, ''));
-    setValue(newValue);
+    const newValue = Number(value.replace(/,\./g, ''));
+    console.log();
+    setAmount(newValue);
   };
 
   const getCurrencyMask = (value: number): string => {
-    const formatter = new Intl.NumberFormat('en', {
-      maximumSignificantDigits: 2
-    });
-
+    const formatter = new Intl.NumberFormat('en');
     return formatter.format(value);
   };
 
   return (
-    <>
-      <Icon src={currency} />
-      <Input
-        type="text"
-        value={getCurrencyMask(amount)}
-        onChange={amountChanged}
-      />
-    </>
+    <Input
+      type="text"
+      value={getCurrencyMask(amount)}
+      onChange={amountChanged}
+    />
   );
 };
 
