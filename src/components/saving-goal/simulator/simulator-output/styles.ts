@@ -3,7 +3,7 @@ import { MediaSM } from '../../../../shared/media-query';
 
 export const Container = styled.div`
   width: 480px;
-  border: 1px solid ${({ theme }) => theme.text.$blueGray50};
+  border: 1px solid ${({ theme }) => theme?.text?.$blueGray50};
   box-sizing: border-box;
   border-radius: 8px;
 
@@ -27,7 +27,7 @@ export const Title = styled.h3`
   font-weight: normal;
   font-size: 20px;
   line-height: 120%;
-  color: ${({ theme }) => theme.text.$blueGray900};
+  color: ${({ theme }) => theme?.text?.$blueGray900};
 `;
 
 export const Value = styled.h3`
@@ -37,11 +37,11 @@ export const Value = styled.h3`
   font-size: 32px;
   line-height: 120%;
   text-align: right;
-  color: ${({ theme }) => theme.color.secondary};
+  color: ${({ theme }) => theme?.color?.secondary};
 `;
 
 export const Subtitle = styled.p`
-  background: ${({ theme }) => theme.text.$blueGray10};
+  background: ${({ theme }) => theme?.text?.$blueGray10};
   border-radius: 8px;
   padding: 24px 32px;
   font-family: Work Sans;
@@ -49,5 +49,5 @@ export const Subtitle = styled.p`
   font-weight: normal;
   font-size: 12px;
   line-height: 16px;
-  color: ${({ theme }) => theme.text.$blueGray900};
+  color: ${({ theme }) => theme?.text?.$blueGray900};
 `;

@@ -16,7 +16,7 @@ export const Container = styled.div`
 `;
 
 export const Button = styled.button`
-  background: ${({ theme }) => theme.color.primary};
+  background: ${({ theme }) => theme?.color?.primary};
   border-radius: 32px;
   border: none;
   width: 320px;

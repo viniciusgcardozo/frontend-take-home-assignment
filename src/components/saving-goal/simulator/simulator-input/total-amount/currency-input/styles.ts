@@ -4,7 +4,7 @@ import currency from '../../../../../../assets/icons/currency.svg';
 import { StyledInput } from '../../../../../../shared/input/styles';
 import { MediaSM } from '../../../../../../shared/media-query';
 
-export const Input = styled(StyledInput)`
+export const Input = styled(StyledInput as any)`
   background: #ffffff url(${currency}) no-repeat left;
   background-position: 7px 15px;
   margin-top: 7px;

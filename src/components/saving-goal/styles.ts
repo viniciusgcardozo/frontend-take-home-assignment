@@ -16,7 +16,7 @@ export const Container = styled.div`
 `;
 
 export const SavingHeader = styled.p`
-  color: ${({ theme }) => theme.color.primary};
+  color: ${({ theme }) => theme?.color?.primary};
   margin-bottom: 24px;
   text-align: center;
   font-family: Work Sans;

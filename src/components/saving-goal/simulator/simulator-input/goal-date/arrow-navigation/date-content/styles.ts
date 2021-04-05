@@ -13,12 +13,12 @@ const ContentBase = styled.p`
   line-height: 150%;
 `;
 
-export const Month = styled(ContentBase)`
+export const Month = styled(ContentBase as any)`
   font-weight: 600;
-  color: ${({ theme }) => theme.text.$blueGray900};
+  color: ${({ theme }) => theme?.text?.$blueGray900};
 `;
 
-export const Year = styled(ContentBase)`
+export const Year = styled(ContentBase as any)`
   font-weight: 400;
-  color: ${({ theme }) => theme.text.$blueGray400};
+  color: ${({ theme }) => theme?.text?.$blueGray400};
 `;

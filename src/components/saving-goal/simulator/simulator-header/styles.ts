@@ -23,7 +23,7 @@ export const Title = styled.h3`
   letter-spacing: 0;
   text-align: left;
   margin: 0;
-  color: ${({ theme }) => theme.text.blueGray900};
+  color: ${({ theme }) => theme?.text?.blueGray900};
 `;
 
 export const Subtitle = styled.h4`

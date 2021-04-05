@@ -7,7 +7,7 @@ export const Container = styled.div`
   justify-content: space-around;
   align-items: center;
   background: white;
-  border: 1px solid ${({ theme }) => theme.text.$blueGray50};
+  border: 1px solid ${({ theme }) => theme?.text?.$blueGray50};
   box-sizing: border-box;
   border-radius: 4px;
   margin-top: 7px;
@@ -27,7 +27,7 @@ const Arrow = styled.img`
   cursor: pointer;
 `;
 
-export const ArrowRight = styled(Arrow)`
+export const ArrowRight = styled(Arrow as any)`
   transform: rotate(180deg);
 `;
 
