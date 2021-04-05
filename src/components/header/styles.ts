@@ -4,11 +4,7 @@ import { MediaSM } from '../../shared/media-query';
 export const Container = styled.header`
   width: 100vw;
   height: 80px;
-  left: 0;
-  right: 0;
-  top: 0;
   background-color: white;
-  z-index: 99;
 
   ${MediaSM`
     display: flex;

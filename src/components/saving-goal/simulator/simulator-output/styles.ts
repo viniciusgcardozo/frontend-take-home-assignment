@@ -1,10 +1,16 @@
 import styled from 'styled-components';
+import { MediaSM } from '../../../../shared/media-query';
 
 export const Container = styled.div`
   width: 480px;
   border: 1px solid ${({ theme }) => theme.text.$blueGray50};
   box-sizing: border-box;
   border-radius: 8px;
+
+  ${MediaSM`
+    max-width: 480px;
+    width: calc(100vw - 40px)
+  `}
 `;
 
 export const MainContent = styled.div`
