@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
+import { MediaSM } from '../../../shared/media-query';
+
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
@@ -20,4 +22,9 @@ export const Button = styled.button`
   width: 320px;
   height: 56px;
   color: white;
+
+  ${MediaSM`
+    width: calc(100vw - 40px);
+    max-width: 320px;
+  `}
 `;

@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { MediaSM } from '../../../../../../shared/media-query';
 
 export const Container = styled.div`
   display: flex;
@@ -12,6 +13,11 @@ export const Container = styled.div`
   margin-top: 7px;
   width: 192px;
   height: 56px;
+
+  ${MediaSM`
+    width: calc(100vw - 40px);
+    max-width: 480px;
+  `}
 `;
 
 const Arrow = styled.img`
