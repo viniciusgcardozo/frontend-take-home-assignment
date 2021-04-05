@@ -8,8 +8,7 @@ const CurrencyInput = () => {
 
   const amountChanged = (event: React.ChangeEvent<HTMLInputElement>) => {
     const { value } = event.target;
-    const newValue = Number(value.replace(/,\./g, ''));
-    console.log();
+    const newValue = Number(value.replace(/\D/g, ''));
     setAmount(newValue);
   };
 
