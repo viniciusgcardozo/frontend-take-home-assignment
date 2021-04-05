@@ -21,9 +21,9 @@ const ArrowNavigation = () => {
 
   return (
     <Container>
-      <ArrowLeft src={Arrow} onClick={decreaseMonth} />
+      <ArrowLeft alt="arrow-left" src={Arrow} onClick={decreaseMonth} />
       <DateContent />
-      <ArrowRight src={Arrow} onClick={increaseMonth} />
+      <ArrowRight alt="arrow-right" src={Arrow} onClick={increaseMonth} />
     </Container>
   );
 };

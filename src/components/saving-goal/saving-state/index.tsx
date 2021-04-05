@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-type SavingContextType = {
+export type SavingContextType = {
   amount: number;
   setAmount: React.Dispatch<React.SetStateAction<number>>;
   date: Date;
@@ -22,3 +22,5 @@ export const SavingProvider: React.FC = ({ children }) => {
     <SavingContext.Provider value={state}>{children}</SavingContext.Provider>
   );
 };
+
+export * from './saving-state.mock';

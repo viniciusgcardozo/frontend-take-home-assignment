@@ -1,10 +1,8 @@
 export const getMonthsInterval = (date: Date): number => {
-  const oneMonthInMillis = 1000 * 60 * 60 * 24 * 30.5;
-  const deposits = Math.ceil(
-    (date.getTime() - new Date().getTime()) / oneMonthInMillis
-  );
+  const monthDiff = date.getMonth() - new Date().getMonth();
+  const yearDiff = (date.getFullYear() - new Date().getFullYear()) * 12;
 
-  return deposits;
+  return monthDiff + yearDiff;
 };
 
 export const getFormattedDate = (date: Date): string => {

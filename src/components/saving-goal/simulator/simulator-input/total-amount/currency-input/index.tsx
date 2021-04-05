@@ -19,6 +19,7 @@ const CurrencyInput = () => {
 
   return (
     <Input
+      data-testid="currency-input"
       type="text"
       value={getCurrencyMask(amount)}
       onChange={amountChanged}
