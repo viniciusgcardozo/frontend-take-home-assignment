@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+
 import { MediaSM } from '../../shared/media-query';
 
 export const Container = styled.div`
@@ -13,6 +14,11 @@ export const Container = styled.div`
     display: block;
     margin-top: 32px;
   `}
+
+  @media screen and (max-height: 680px) {
+    height: auto;
+    margin: 48px 0;
+  }
 `;
 
 export const SavingHeader = styled.p`

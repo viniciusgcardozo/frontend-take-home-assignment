@@ -6,6 +6,11 @@ export const Container = styled.div`
   width: 100%;
 `;
 
+export const House = styled.img`
+  width: 64px;
+  height: 64px;
+`;
+
 export const TextWrapper = styled.div`
   display: flex;
   flex-direction: column;
