@@ -5,16 +5,17 @@ import wedding from '../../assets/icons/wedding.svg';
 import emergencyFund from '../../assets/icons/emergency-fund.svg';
 import baby from '../../assets/icons/baby.svg';
 
-type State = {
+export type GoalState = {
   icon: string;
   title: string;
-  data?: {
-    amount: number;
-    date: Date;
-  };
 };
 
-const GoalMap: { [prop: string]: State } = {
+export type GoalData = {
+  amount: number;
+  date: Date;
+};
+
+const GoalMap: { [prop: string]: GoalState } = {
   1: {
     icon: college,
     title: 'Go to college'

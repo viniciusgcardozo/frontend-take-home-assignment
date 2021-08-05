@@ -1,14 +1,18 @@
 import * as React from 'react';
 
 import { Container, House, TextWrapper, Title, Subtitle } from './styles';
-import house from '../../../../assets/icons/house.svg';
 
-const SimulatorHeader = () => {
+type HeaderProps = {
+  icon: string;
+  title: string;
+};
+
+const SimulatorHeader = ({ icon, title }: HeaderProps) => {
   return (
     <Container>
-      <House src={house} alt="house" />
+      <House src={icon} alt="house" />
       <TextWrapper>
-        <Title>Buy a house</Title>
+        <Title>{title}</Title>
         <Subtitle>Saving goal</Subtitle>
       </TextWrapper>
     </Container>

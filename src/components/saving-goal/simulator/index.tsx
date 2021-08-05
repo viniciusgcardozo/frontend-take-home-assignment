@@ -4,14 +4,22 @@ import { Container, Button } from './styles';
 import SimulatorHeader from './simulator-header';
 import SimulatorInput from './simulator-input';
 import SimulatorOutput from './simulator-output';
+import { GoalState } from '../../../utils/goal-map';
+import { SavingContext } from '../saving-state';
 
-const Simulator = () => {
+const Simulator = ({ goal, goalId }: { goal: GoalState; goalId: string }) => {
+  const goalData = React.useContext(SavingContext);
+
+  const persistGoal = () => {
+    localStorage.setItem(goalId, JSON.stringify(goalData));
+  };
+
   return (
     <Container>
-      <SimulatorHeader />
+      <SimulatorHeader icon={goal.icon} title={goal.title} />
       <SimulatorInput />
       <SimulatorOutput />
-      <Button>Confirm</Button>
+      <Button onClick={persistGoal}>Confirm</Button>
     </Container>
   );
 };
