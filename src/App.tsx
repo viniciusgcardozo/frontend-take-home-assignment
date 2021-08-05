@@ -1,15 +1,18 @@
 import * as React from 'react';
 import { ThemeProvider } from 'styled-components';
+import { BrowserRouter } from 'react-router-dom';
 
-import Header from './components/header';
-import SavingGoal from './components/saving-goal';
 import { GlobalStyle, theme } from './styles';
+import Router from './components/router';
+import Header from './components/header';
 
 const App: React.FC = () => {
   return (
     <ThemeProvider theme={theme}>
-      <Header />
-      <SavingGoal />
+      <BrowserRouter>
+        <Header />
+        <Router />
+      </BrowserRouter>
       <GlobalStyle />
     </ThemeProvider>
   );
